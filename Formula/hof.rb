@@ -2,9 +2,9 @@
 class Hof < Formula
   desc "Hofstadter Studios CLI"
   homepage "https://github.com/hofstadter-io/hof"
-  url "https://github.com/hofstadter-io/hof/releases/download/0.3.4/hof_0.3.4_MacOS-64bit.tar.gz"
-  version "0.3.4"
-  sha256 "8d90afff11af13bddb71a1ef0304dbc9e7bc1bd9545d48a1ed7406f718908a6d"
+  url "https://github.com/hofstadter-io/hof/releases/download/0.3.6/hof_0.3.6_MacOS-64bit.tar.gz"
+  version "0.3.6"
+  sha256 "f294bf77fb2aeedf7a0155e0fb655cbb5a60cc13000662462361ffcaf1e8b240"
 
   def install
     bin.install "hof"
