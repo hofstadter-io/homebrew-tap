@@ -8,15 +8,6 @@ class Hof < Formula
   license "BSD-3-Clause"
   head "https://github.com/hofstadter-io/hof.git", branch: "_dev"
 
-  bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "da7fa63d18da0c17f4bd2b4d1ddef8a1fa6bf9409ad32646db184e2da74a4472"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "da7fa63d18da0c17f4bd2b4d1ddef8a1fa6bf9409ad32646db184e2da74a4472"
-    sha256 cellar: :any_skip_relocation, monterey:       "0b9a77f9209c943caabd4cbb896a8cd31690d474735998df1a30ce777b7cee19"
-    sha256 cellar: :any_skip_relocation, big_sur:        "0b9a77f9209c943caabd4cbb896a8cd31690d474735998df1a30ce777b7cee19"
-    sha256 cellar: :any_skip_relocation, catalina:       "0b9a77f9209c943caabd4cbb896a8cd31690d474735998df1a30ce777b7cee19"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7386d7a1f88d925e4621e1950e1edbca8361d813f68084eee7d53d185ad0da49"
-  end
-
   depends_on "go" => :build
   depends_on "docker" => :test
 
