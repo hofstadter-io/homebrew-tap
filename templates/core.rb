@@ -1,7 +1,6 @@
 class {{ title .name }} < Formula
   desc "{{ .desc }}"
   homepage "{{ .homepage }}"
-  version "{{ .version }}"
   url "{{ .url }}",
     tag:      "{{ .tag }}",
     revision: "{{ .commit }}"
@@ -32,3 +31,4 @@ class {{ title .name }} < Formula
     assert_match "v#{version}", shell_output("#{bin}/{{ .name }} version")
   end
 end
+
