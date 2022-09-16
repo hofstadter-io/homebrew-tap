@@ -18,7 +18,7 @@ class {{ title .name }} < Formula
     ldflags = %W[ {{ .ldflags }} ]
 
     ENV["CGO_ENABLED"] = "0"
-    ENG["{{ upper .name }}_TELEMETRY_DISABLED"] = 1
+    ENV["{{ upper .name }}_TELEMETRY_DISABLED"] = 1
     system "go", "build", *std_go_args(ldflags: ldflags), "./{{ .cmddir }}"
 
     bash_output = Utils.safe_popen_read(bin/"{{ .name }}", "completion", "bash")
@@ -30,7 +30,7 @@ class {{ title .name }} < Formula
   end
 
   test do
-    ENG["{{ upper .name }}_TELEMETRY_DISABLED"] = 1
+    ENV["{{ upper .name }}_TELEMETRY_DISABLED"] = 1
     assert_match "v#{version}", shell_output("#{bin}/{{ .name }} version")
   end
 end
