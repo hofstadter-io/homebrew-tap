@@ -17,6 +17,7 @@ class {{ title .name }} < Formula
     ldflags = %W[ {{ .ldflags }} ]
 
     ENV["CGO_ENABLED"] = "0"
+    ENV["{{ upper .name }}_TELEMETRY_DISABLED"] = 1
     system "go", "build", *std_go_args(ldflags: ldflags), "./{{ .cmddir }}"
 
     bash_output = Utils.safe_popen_read(bin/"{{ .name }}", "completion", "bash")

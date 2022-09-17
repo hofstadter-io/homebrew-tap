@@ -21,12 +21,7 @@ class {{ title .name }} < Formula
     ENV["{{ upper .name }}_TELEMETRY_DISABLED"] = 1
     system "go", "build", *std_go_args(ldflags: ldflags), "./{{ .cmddir }}"
 
-    bash_output = Utils.safe_popen_read(bin/"{{ .name }}", "completion", "bash")
-    (bash_completion/"{{ .name }}").write bash_output
-    zsh_output = Utils.safe_popen_read(bin/"{{ .name }}", "completion", "zsh")
-    (zsh_completion/"_{{ .name }}").write zsh_output
-    fish_output = Utils.safe_popen_read(bin/"{{ .name }}", "completion", "fish")
-    (fish_completion/"{{ .name }}.fish").write fish_output
+    generate_completions_from_executable(bin/"{{ .name }}", "completion")
   end
 
   test do

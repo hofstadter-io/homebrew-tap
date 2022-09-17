@@ -1,10 +1,10 @@
 class Hof < Formula
   desc "Flexible data modeling & code generation system"
   homepage "https://hofstadter.io/"
-  version "0.6.6"
+  version "0.6.7-beta.1"
   url "https://github.com/hofstadter-io/hof.git",
-    tag:      "v0.6.6",
-    revision: "0f49b4d71a66788b006daacf905a2b138768beca"
+    tag:      "v0.6.7-beta.1",
+    revision: "4233c2632c8fd007dd38d732928b13de7c803537"
   license "BSD-3-Clause"
   head "https://github.com/hofstadter-io/hof.git", branch: "_dev"
 
@@ -21,12 +21,7 @@ class Hof < Formula
     ENV["HOF_TELEMETRY_DISABLED"] = 1
     system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/hof"
 
-    bash_output = Utils.safe_popen_read(bin/"hof", "completion", "bash")
-    (bash_completion/"hof").write bash_output
-    zsh_output = Utils.safe_popen_read(bin/"hof", "completion", "zsh")
-    (zsh_completion/"_hof").write zsh_output
-    fish_output = Utils.safe_popen_read(bin/"hof", "completion", "fish")
-    (fish_completion/"hof.fish").write fish_output
+    generate_completions_from_executable(bin/"hof", "completion")
   end
 
   test do
