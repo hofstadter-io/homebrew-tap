@@ -1,10 +1,10 @@
 class Hof < Formula
   desc "Flexible data modeling & code generation system"
   homepage "https://hofstadter.io/"
-  version "0.6.7-beta.1"
+  version "0.6.7-beta.2"
   url "https://github.com/hofstadter-io/hof.git",
-    tag:      "v0.6.7-beta.1",
-    revision: "4233c2632c8fd007dd38d732928b13de7c803537"
+    tag:      "v0.6.7-beta.2",
+    revision: "d5aca0d91efb338dcd5430e879d6ded363d39761"
   license "BSD-3-Clause"
   head "https://github.com/hofstadter-io/hof.git", branch: "_dev"
 
