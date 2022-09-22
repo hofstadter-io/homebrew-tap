@@ -3,9 +3,9 @@ package main
 import "strings"
 
 name: "hof"
-version: "0.6.7-beta.2"
-tag: "v0.6.7-beta.2"
-commit:  "d5aca0d91efb338dcd5430e879d6ded363d39761"
+version: "0.6.7-rc.2"
+tag: "v0.6.7-rc.2"
+commit:  "521e084f36adf29a9e71636a05f02904c481ef89"
 desc: "Flexible data modeling & code generation system"
 homepage: "https://hofstadter.io/"
 repo: "github.com/hofstadter-io/hof"
