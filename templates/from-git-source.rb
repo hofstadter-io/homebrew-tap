@@ -18,14 +18,14 @@ class {{ title .name }} < Formula
     ldflags = %W[ {{ .ldflags }} ]
 
     ENV["CGO_ENABLED"] = "0"
-    ENV["{{ upper .name }}_TELEMETRY_DISABLED"] = 1
+    ENV["{{ upper .name }}_TELEMETRY_DISABLED"] = "1"
     system "go", "build", *std_go_args(ldflags: ldflags), "./{{ .cmddir }}"
 
     generate_completions_from_executable(bin/"{{ .name }}", "completion")
   end
 
   test do
-    ENV["{{ upper .name }}_TELEMETRY_DISABLED"] = 1
+    ENV["{{ upper .name }}_TELEMETRY_DISABLED"] = "1"
     assert_match "v#{version}", shell_output("#{bin}/{{ .name }} version")
   end
 end
