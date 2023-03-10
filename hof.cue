@@ -3,8 +3,8 @@ package main
 import "strings"
 
 name: "hof"
-version: "0.6.7"
-tag: "v0.6.7"
+version: tag
+tag: "v0.6.8-beta.11"
 commit:  "5f6770b9628cd46a4caa24594e052dd715ac2dca"
 desc: "A flexible data modeling & code generation system"
 homepage: "https://hofstadter.io/"
