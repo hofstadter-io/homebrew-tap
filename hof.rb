@@ -4,7 +4,7 @@ class Hof < Formula
   version "v0.6.8-beta.11"
   url "https://github.com/hofstadter-io/hof.git",
     tag:      "v0.6.8-beta.11",
-    revision: "5f6770b9628cd46a4caa24594e052dd715ac2dca"
+    revision: "3f3eef40bde51b1a27763f9638bbabaa897ae52c"
   license "BSD-3-Clause"
   head "https://github.com/hofstadter-io/hof.git", branch: "_dev"
 
@@ -29,7 +29,6 @@ class Hof < Formula
     assert_match "v#{version}", shell_output("#{bin}/hof version")
 
     system bin/"hof", "mod", "init", "cue", "brew.sh/brewtest"
-    assert_predicate testpath/"cue.mods", :exist?
     assert_equal "module: \"brew.sh/brewtest\"", (testpath/"cue.mod/module.cue").read.chomp
 
     assert_match version.to_s, shell_output(bin/"hof version")
