@@ -2,18 +2,18 @@ package main
 
 import "strings"
 
-name: "hof"
-version: tag
-tag: "v0.6.8-beta.12"
-commit:  "475328015adf6d102e5227a646e63f6a2b23119f"
-desc: "A flexible data modeling & code generation system"
+name:     "hof"
+version:  tag
+tag:      "v0.6.8-rc.1"
+commit:   "d11b312c5741ecb5e98a66eb1e91cd814df1582d"
+desc:     "CUE powered data modeling & code generation system"
 homepage: "https://hofstadter.io/"
-repo: "github.com/hofstadter-io/hof"
-url: "https://\(repo).git"
-license: "BSD-3-Clause"
-branch: "_dev"
-cmddir: "cmd/hof"
-ldflags: strings.Replace("""
+repo:     "github.com/hofstadter-io/hof"
+url:      "https://\(repo).git"
+license:  "BSD-3-Clause"
+branch:   "_dev"
+cmddir:   "cmd/hof"
+ldflags:  strings.Replace("""
 -s -w
 -X \(repo)/\(cmddir)/verinfo.Version=#{version}
 -X \(repo)/\(cmddir)/verinfo.Commit=#{Utils.git_head}
