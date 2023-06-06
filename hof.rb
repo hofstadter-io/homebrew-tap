@@ -1,11 +1,11 @@
 class Hof < Formula
   desc "CUE powered data modeling & code generation system"
   homepage "https://hofstadter.io/"
-  version "v0.6.8-rc.2"
+  version "v0.6.8-rc.4"
   url "https://github.com/hofstadter-io/hof.git",
-      tag: "v0.6.8-rc.2",
-      revision: "61e49c64d78f6594b89064ab0e274091c3305edc"
-  license "BSD-3-Clause"
+      tag: "v0.6.8-rc.4",
+      revision: "f98105ccf465be0c713d6cfea1ed64c3ee44ee42"
+  license "Apache-2"
   head "https://github.com/hofstadter-io/hof.git", branch: "_dev"
 
   depends_on "go" => :build
