@@ -4,8 +4,8 @@ import "strings"
 
 name:     "hof"
 version:  tag
-tag:      "v0.6.8-rc.4"
-commit:   "f98105ccf465be0c713d6cfea1ed64c3ee44ee42"
+tag:      "v0.6.8"
+commit:   "112659fe982a3efbe0acdb151c659e0b8b2e081f"
 desc:     "CUE powered data modeling & code generation system"
 homepage: "https://hofstadter.io/"
 repo:     "github.com/hofstadter-io/hof"
