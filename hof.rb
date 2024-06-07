@@ -1,9 +1,9 @@
 class Hof < Formula
   desc "CUE powered developer tools & framework"
   homepage "https://hofstadter.io/"
-  version "v0.6.9-rc.2"
+  version "v0.6.9"
   url "https://github.com/hofstadter-io/hof.git",
-      tag: "v0.6.9-rc.2",
+      tag: "v0.6.9",
       revision: "87cf8d74ad87f1977010966a395950047ce4e1a1"
   license "Apache-2"
   head "https://github.com/hofstadter-io/hof.git", branch: "_dev"
