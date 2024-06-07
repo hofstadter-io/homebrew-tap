@@ -5,7 +5,7 @@ import "strings"
 name:     "hof"
 version:  tag
 tag:      "v0.6.9"
-commit:   "87cf8d74ad87f1977010966a395950047ce4e1a1"
+commit:   "bebc58f867e4341e3060f2421910acef6b743ea5"
 desc:     "CUE powered developer tools & framework"
 homepage: "https://hofstadter.io/"
 repo:     "github.com/hofstadter-io/hof"

@@ -4,7 +4,7 @@ class Hof < Formula
   version "v0.6.9"
   url "https://github.com/hofstadter-io/hof.git",
       tag: "v0.6.9",
-      revision: "87cf8d74ad87f1977010966a395950047ce4e1a1"
+      revision: "bebc58f867e4341e3060f2421910acef6b743ea5"
   license "Apache-2"
   head "https://github.com/hofstadter-io/hof.git", branch: "_dev"
 
